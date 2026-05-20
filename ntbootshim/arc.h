@@ -223,20 +223,20 @@ struct _LOADER_BOOT_APPLICATION_SVN_INFORMATION
 	ULONG HiberrsmMinSvn;					  // 0x8
 }; 
 
-// 0x10 bytes (sizeof)
-struct _PHYSICAL_MEMORY_RUN
-{
-	ULONGLONG BasePage;	 // 0x0
-	ULONGLONG PageCount; // 0x8
-}; 
-
-// 0x20 bytes (sizeof)
-struct _PHYSICAL_MEMORY_DESCRIPTOR
-{
-	ULONG NumberOfRuns;					// 0x0
-	ULONGLONG NumberOfPages;			// 0x8
-	struct _PHYSICAL_MEMORY_RUN Run[1]; // 0x10
-}; 
+//// 0x10 bytes (sizeof)
+//struct _PHYSICAL_MEMORY_RUN
+//{
+//	ULONGLONG BasePage;	 // 0x0
+//	ULONGLONG PageCount; // 0x8
+//}; 
+//
+//// 0x20 bytes (sizeof)
+//struct _PHYSICAL_MEMORY_DESCRIPTOR
+//{
+//	ULONG NumberOfRuns;					// 0x0
+//	ULONGLONG NumberOfPages;			// 0x8
+//	struct _PHYSICAL_MEMORY_RUN Run[1]; // 0x10
+//}; 
 
 // 0x4 bytes (sizeof)
 enum _TYPE_OF_MEMORY

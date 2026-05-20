@@ -90,7 +90,8 @@
       <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
     </DriverSign>
     <ClCompile>
-      <DisableSpecificWarnings>4748;%(DisableSpecificWarnings);4201</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4748;%(DisableSpecificWarnings);4201;4083;4005;4273</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_WIN64;_AMD64_;AMD64;%(PreprocessorDefinitions);_DEBUG</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(KernelBufferOverflowLib);libcntpr.lib</AdditionalDependencies>
@@ -102,7 +103,7 @@
       <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
     </DriverSign>
     <ClCompile>
-      <DisableSpecificWarnings>4603;4627;4986;4987;%(DisableSpecificWarnings);4201</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4603;4627;4986;4987;%(DisableSpecificWarnings);4201;4083;4005;4273</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(KernelBufferOverflowLib);libcntpr.lib</AdditionalDependencies>
@@ -111,7 +112,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
-      <DisableSpecificWarnings>4064;4627;4627;4366;%(DisableSpecificWarnings);4201</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4064;4627;4627;4366;%(DisableSpecificWarnings);4201;4083;4005;4273</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_ARM64_;ARM64;_USE_DECLSPECS_FOR_SAL=1;STD_CALL;%(PreprocessorDefinitions);_DEBUG</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(KernelBufferOverflowLib);libcntpr.lib</AdditionalDependencies>
@@ -120,7 +122,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
-      <DisableSpecificWarnings>4064;4627;4627;4366;%(DisableSpecificWarnings);4201</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4064;4627;4627;4366;%(DisableSpecificWarnings);4201;4083;4005;4273</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(KernelBufferOverflowLib);libcntpr.lib</AdditionalDependencies>
@@ -131,12 +133,15 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="crt.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="serial.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arc.h" />
     <ClInclude Include="linux.h" />
     <ClInclude Include="ntstuff.h" />
+    <ClInclude Include="serial.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

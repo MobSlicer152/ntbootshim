@@ -65,3 +65,5 @@ typedef struct _KLDR_DATA_TABLE_ENTRY
 	ULONG SizeOfImageNotRounded; // 0x98
 	ULONG TimeDateStamp;		 // 0x9c
 } KLDR_DATA_TABLE_ENTRY, *PKLDR_DATA_TABLE_ENTRY;
+
+extern "C" int _vsnprintf(char* buffer, size_t sizeOfBuffer, const char* format, va_list argptr);

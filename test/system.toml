@@ -1,0 +1,12 @@
+["Select"]
+Current = 1
+
+["ControlSet001\\Services\\vmlinuz"]
+Start = 0
+ImagePath = "\\SystemRoot\\vmlinuz.sys"
+Type = 1
+
+["ControlSet001\\Services\\initrd"]
+Start = 0
+ImagePath = "\\SystemRoot\\initrd.sys"
+Type = 1

@@ -18,24 +18,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="serial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="crt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ntstuff.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="linux.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="serial.h">
+    <ClInclude Include="toml.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
