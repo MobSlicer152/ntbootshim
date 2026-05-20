@@ -143,6 +143,9 @@
     <ClInclude Include="ntstuff.h" />
     <ClInclude Include="serial.h" />
   </ItemGroup>
+  <ItemGroup>
+    <MASM Include="enter.asm" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
